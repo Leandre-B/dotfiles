@@ -1,0 +1,71 @@
+{
+  "layer": "bot",
+  "spacing": 0,
+  "height": 0,
+  "margin-bottom": 0,
+  "margin-top": 0,
+  "position": "top",
+  "margin-right": 0,
+  "margin-left": 0,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "tray",
+    "custom/powermenu"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "tooltip": false
+  },
+  "tray": {
+    "spacing": 10,
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%d/%m/%y | %H:%M}",
+    "tooltip": false 
+  },
+  "network": {
+    "format-wifi": "\uf1eb  {bandwidthDownBits}",
+    "format-ethernet": "\udb80\ude00  {bandwidthDownBits}",
+    "format-disconnected": "\udb81\uddaa󰤮 No Network",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "bluetooth" : {
+    "format":"\udb80\udcaf {status}",
+    "interval": 5,
+    "tooltip": false,
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "max-volume": 150,
+    "format": "\uf028  {volume}%",
+    "format-icons": [
+      "",
+      "",
+      " "
+    ],
+    "nospacing": 1,
+    "format-muted": "\ueee8 ",
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+  "custom/powermenu": {
+    "format": "⏻",
+    "on-click": "~/.config/waybar/scripts/powermenu.sh",
+    "tooltip": false
+  }
+}

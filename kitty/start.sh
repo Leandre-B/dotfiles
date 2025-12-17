@@ -1,0 +1,2 @@
+fastfetch
+exec $SHELL
